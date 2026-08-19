@@ -211,29 +211,41 @@
     ]
   },
   {
-    "title": "StockSim - Simulateur boursier et visualisation financière",
-    "description": "Application de simulation boursière permettant de suivre les cours, gérer un portefeuille virtuel et simuler des investissements.",
-    "technologies": "Java, MVC, Observer, Visitor, JSON, Programmation orientée objet",
-    "gitHubUrl": "",
+    "title": "StockSim — Moteur de marché et simulateur boursier",
+    "description": "Application desktop et CLI en Java 17 simulant un marché financier : cours en temps réel, ordres de marché, à cours limité et stop-loss, portefeuille valorisé, indices composites et persistance complète de la simulation.",
+    "technologies": "Java 17, Swing, Maven, JUnit 5, MVC, Design Patterns, JSON, CSV Yahoo Finance",
+    "gitHubUrl": "https://github.com/adamiassamen/Simu-Boursiere-ACOL",
     "images": [],
-    "skillsAcquired": ["Programmation orientée objet", "Architecture MVC", "Design patterns", "Simulation financière", "Visualisation de données", "Persistance JSON"],
+    "skillsAcquired": ["Modélisation d’un domaine financier", "Architecture MVC en couches", "Design patterns GoF", "Moteur de simulation événementiel", "Interface Java Swing", "Tests unitaires JUnit 5", "Persistance JSON", "Import et export CSV"],
     "sections": [
       {
         "title": "Architecture",
-        "subtitle": "Conception orientée objet et séparation stricte des responsabilités.",
+        "subtitle": "Une architecture MVC en six couches et un domaine financier extensible.",
         "items": [
-          { "text": "Architecture MVC pour séparer logique métier, affichage et interactions utilisateur.", "subItems": [] },
-          { "text": "Patterns Observer/Observable pour actualiser les cours et Visitor pour traiter et persister les données financières.", "subItems": [] },
-          { "text": "Sauvegarde de l’état des portefeuilles dans des fichiers structurés JSON.", "subItems": [] }
+          { "text": "Séparation entre vues, contrôleurs, services applicatifs, domaine, moteur de marché et infrastructure.", "subItems": [] },
+          { "text": "Mise en œuvre de huit patrons de conception.", "subItems": ["Singleton pour le moteur de marché", "Strategy pour les sources de cours aléatoires ou CSV", "Observer pour le rafraîchissement de l’interface", "Abstract Factory pour les différents ordres", "Composite pour les indices", "State pour le cycle de vie des ordres", "Visitor pour les exports", "Factory Method pour les sources de données"] },
+          { "text": "Deux interfaces sur le même cœur métier : application graphique Swing et CLI structurée par sous-menus.", "subItems": [] }
         ]
       },
       {
-        "title": "Fonctionnalités",
-        "subtitle": "Simulation et suivi d’un portefeuille financier.",
+        "title": "Simulation et trading",
+        "subtitle": "Un parcours complet, de la création du compte à l’analyse du portefeuille.",
         "items": [
-          { "text": "Visualisation graphique dynamique de l’évolution du cours des actions.", "subItems": [] },
-          { "text": "Passage d’ordres d’achat et de vente avec calcul des plus-values, moins-values et mise à jour du solde.", "subItems": [] },
-          { "text": "Tableau de bord global des performances du portefeuille.", "subItems": [] }
+          { "text": "Inscription et authentification des joueurs, avec capital initial et empreinte SHA-256 du mot de passe.", "subItems": [] },
+          { "text": "Moteur de marché cadencé par ticks, vitesse configurable et stratégies de génération interchangeables.", "subItems": [] },
+          { "text": "Consultation des titres par secteur, historique des cours et indices composites.", "subItems": [] },
+          { "text": "Ordres d’achat et de vente au marché, à cours limité et stop-loss, avec gestion de leurs états : en attente, exécuté, annulé ou expiré.", "subItems": [] },
+          { "text": "Valorisation du portefeuille, solde disponible, valeur nette, plus-values et historique des transactions.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Données, qualité et fiabilité",
+        "subtitle": "Une simulation reproductible et indépendante de services externes.",
+        "items": [
+          { "text": "Chargement de séries de cours au format Yahoo Finance et génération aléatoire pour fonctionner hors ligne.", "subItems": [] },
+          { "text": "Sauvegarde JSON de l’horloge, des titres, historiques, ordres, joueurs, portefeuilles et transactions.", "subItems": [] },
+          { "text": "Export de l’historique des transactions en CSV et JSON via le patron Visitor.", "subItems": [] },
+          { "text": "10 tests JUnit réussis répartis sur 5 suites couvrant comptes, marché, ordres, portefeuille et persistance.", "subItems": [] }
         ]
       }
     ]

@@ -13,6 +13,7 @@
     --david:         #ef7619;       /* Doré pour les chiffres clés */
     --text-muted:    #34312d;       /* Gris chaud muted */
     --accent:        #854200;       /* Cuivre assombri : contraste AA sur les surfaces claires */
+    --accent-on-dark:#f2a65a;       /* Cuivre lumineux pour les textes posés sur une photographie */
     --accent-2:      #5a7a95;       /* Gris-bleu des façades vitrées */
     --accent-light:  rgba(192, 120, 48, 0.12); /* Fond accent léger */
     --accent-glow:   rgba(201, 124, 46, 0.25); /* Lueur accent */
@@ -741,7 +742,9 @@ button {
 }
 
 .fullbg-header .eyebrow {
-    color: var(--accent) !important;
+    color: var(--accent-on-dark) !important;
+    font-weight: 700;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85);
 }
 
 .fullbg-header h1 {
