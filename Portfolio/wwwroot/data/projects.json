@@ -10,7 +10,8 @@
       { "url": "images/arcade/consult-table-liste.png", "alt": "Consultation des tables ARCADE sous forme de liste filtrable", "caption": "Vue liste avec recherche, filtres et scores documentaires" },
       { "url": "images/arcade/detail-table.png", "alt": "Fiche détaillée d’une table et de ses métadonnées dans ARCADE", "caption": "Fiche table : descriptions, colonnes, tags et indicateur de complétude" },
       { "url": "images/arcade/editer-colonne.png", "alt": "Fenêtre d’édition des métadonnées d’une colonne dans ARCADE", "caption": "Édition assistée des métadonnées et application de suggestions" },
-      { "url": "images/arcade/export2.png", "alt": "Écran d’export Excel du catalogue ARCADE", "caption": "Export Excel configurable du catalogue de données" }
+      { "url": "images/arcade/export2.png", "alt": "Écran d’export Excel du catalogue ARCADE", "caption": "Export Excel configurable du catalogue de données" },
+      { "url": "images/arcade/importer.png", "alt": "Écran d’importation de données dans ARCADE", "caption": "Importation de données configurable du catalogue de données" }
     ],
     "skillsAcquired": ["Développement full-stack", "Architecture logicielle", "Conception d’API REST", "Modélisation PostgreSQL", "Tests automatisés", "CI/CD", "Conteneurisation", "Déploiement AWS", "Sécurité des secrets", "Documentation technique"],
     "sections": [
