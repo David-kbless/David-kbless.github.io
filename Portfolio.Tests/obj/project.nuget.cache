@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G1QwYpX2LhY=",
+  "dgSpecHash": "+4yKRw57uG8=",
   "success": true,
-  "projectFilePath": "c:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
+  "projectFilePath": "C:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yao-david.kossi\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.27\\microsoft.aspnetcore.authorization.8.0.27.nupkg.sha512",
     "C:\\Users\\yao-david.kossi\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.27\\microsoft.aspnetcore.components.8.0.27.nupkg.sha512",

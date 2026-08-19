@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj": {}
+    "C:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj": {}
   },
   "projects": {
-    "c:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj": {
+    "C:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
+        "projectUniqueName": "C:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
         "projectName": "Portfolio.Tests",
-        "projectPath": "c:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
+        "projectPath": "C:\\PortfolioKOSSI\\Portfolio.Tests\\Portfolio.Tests.csproj",
         "packagesPath": "C:\\Users\\yao-david.kossi\\.nuget\\packages\\",
-        "outputPath": "c:\\PortfolioKOSSI\\Portfolio.Tests\\obj\\",
+        "outputPath": "C:\\PortfolioKOSSI\\Portfolio.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yao-david.kossi\\AppData\\Roaming\\NuGet\\NuGet.Config"

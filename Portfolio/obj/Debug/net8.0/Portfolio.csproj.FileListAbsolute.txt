@@ -3102,6 +3102,7 @@ C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\staticwebassets.build.endpoints.jso
 C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\swae.build.ex.cache
 C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\Portfolio.csproj.Up2Date
 C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\ref\Portfolio.dll
-C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\phqntkgxay-{0}-7d9ty297ax-7d9ty297ax.gz
-C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\dd4nc87vck-{0}-91cthxpk1t-91cthxpk1t.gz
-C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\n4srf7eo0m-{0}-0bn69z8w9a-0bn69z8w9a.gz
+C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\Portfolio.sourcelink.json
+C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\phqntkgxay-{0}-18w44h52ox-18w44h52ox.gz
+C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\dd4nc87vck-{0}-xzja6afgu6-xzja6afgu6.gz
+C:\PortfolioKOSSI\Portfolio\obj\Debug\net8.0\compressed\n4srf7eo0m-{0}-bq1iudmwlx-bq1iudmwlx.gz
