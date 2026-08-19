@@ -1,0 +1,43 @@
+@using Portfolio.Models
+
+<article class="project-card">
+    <div class="project-card-header">
+        <h2>@Project.Title</h2>
+        <span class="project-icon" aria-hidden="true">◆</span>
+    </div>
+    <p>@Project.Description</p>
+    <div class="tech-tags" aria-label="Technologies utilisées">
+        @foreach (var technology in Technologies)
+        {
+            <span class="tech-tag">@technology</span>
+        }
+    </div>
+    <div class="project-card-footer">
+        @if (!string.IsNullOrWhiteSpace(Project.GitHubUrl))
+        {
+            <a href="@Project.GitHubUrl" target="_blank" rel="noopener noreferrer" class="project-link">
+                GitHub <span aria-hidden="true">↗</span>
+            </a>
+        }
+        else
+        {
+            <span class="project-link disabled">GitHub - bientôt</span>
+        }
+        @if (Project.Sections.Count > 0)
+        {
+            <button type="button" class="project-detail-btn" @onclick="ShowDetails">
+                Voir le détail <span aria-hidden="true">→</span>
+            </button>
+        }
+    </div>
+</article>
+
+@code {
+    [Parameter, EditorRequired] public Project Project { get; set; } = default!;
+    [Parameter] public EventCallback<Project> OnDetailsRequested { get; set; }
+
+    private IEnumerable<string> Technologies => Project.Technologies
+        .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+    private Task ShowDetails() => OnDetailsRequested.InvokeAsync(Project);
+}

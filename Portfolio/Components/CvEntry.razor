@@ -1,0 +1,18 @@
+<article class="cv-entry">
+    <div class="cv-entry-date">@Date</div>
+    <div class="cv-entry-content">
+        <h3>@Title</h3>
+        <p class="cv-entry-place">@Place</p>
+        @if (!string.IsNullOrWhiteSpace(Description))
+        {
+            <p class="cv-entry-desc">@Description</p>
+        }
+    </div>
+</article>
+
+@code {
+    [Parameter, EditorRequired] public string Date { get; set; } = "";
+    [Parameter, EditorRequired] public string Title { get; set; } = "";
+    [Parameter, EditorRequired] public string Place { get; set; } = "";
+    [Parameter] public string Description { get; set; } = "";
+}

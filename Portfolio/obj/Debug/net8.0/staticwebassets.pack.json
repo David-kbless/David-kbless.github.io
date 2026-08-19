@@ -1,0 +1,93 @@
+{
+  "Files": [
+    {
+      "Id": "/home/kossiy/Portfolio/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/obj/Debug/net8.0/compressed/i8b3qkldfm.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/obj/Debug/net8.0/scopedcss/bundle/Portfolio.styles.css",
+      "PackagePath": "staticwebassets/Portfolio.styles.css"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/bd2.jpg",
+      "PackagePath": "staticwebassets/bd2.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/bg.jpg",
+      "PackagePath": "staticwebassets/bg.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/bourse.jpg",
+      "PackagePath": "staticwebassets/bourse.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/buildings.jpg",
+      "PackagePath": "staticwebassets/buildings.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/color.png",
+      "PackagePath": "staticwebassets/color.png"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/cvimage.jpg",
+      "PackagePath": "staticwebassets/cvimage.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/nasa.jpg",
+      "PackagePath": "staticwebassets/nasa.jpg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/profil.jpeg",
+      "PackagePath": "staticwebassets/profil.jpeg"
+    },
+    {
+      "Id": "/home/kossiy/Portfolio/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.Portfolio.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.Portfolio.props",
+      "PackagePath": "build\\Portfolio.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Portfolio.props",
+      "PackagePath": "buildMultiTargeting\\Portfolio.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Portfolio.props",
+      "PackagePath": "buildTransitive\\Portfolio.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

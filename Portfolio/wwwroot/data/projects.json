@@ -1,0 +1,260 @@
+[
+  {
+    "title": "ARCADE - Catalogue de données Artelia | Stage Full-Stack (juin–août 2026)",
+    "description": "Conception et développement full-stack d’une application métier de gestion de catalogue de données, de la modélisation PostgreSQL jusqu’à l’industrialisation du déploiement sur AWS.",
+    "technologies": "Angular 20, TypeScript, .NET 10, ASP.NET Core, PostgreSQL, EF Core, AWS ECS, Amazon ECR, Azure Pipelines, Podman, Docker, Okta, Jest, xUnit",
+    "gitHubUrl": "",
+    "images": [
+      { "url": "images/arcade/tab-bord.png", "alt": "Tableau de bord ARCADE présentant les indicateurs de qualité du catalogue", "caption": "Tableau de bord de qualité et de complétude du catalogue" },
+      { "url": "images/arcade/consult-table-arbo.png", "alt": "Consultation arborescente des tables du catalogue ARCADE", "caption": "Navigation arborescente et filtres avancés du catalogue" },
+      { "url": "images/arcade/consult-table-liste.png", "alt": "Consultation des tables ARCADE sous forme de liste filtrable", "caption": "Vue liste avec recherche, filtres et scores documentaires" },
+      { "url": "images/arcade/detail-table.png", "alt": "Fiche détaillée d’une table et de ses métadonnées dans ARCADE", "caption": "Fiche table : descriptions, colonnes, tags et indicateur de complétude" },
+      { "url": "images/arcade/editer-colonne.png", "alt": "Fenêtre d’édition des métadonnées d’une colonne dans ARCADE", "caption": "Édition assistée des métadonnées et application de suggestions" },
+      { "url": "images/arcade/export2.png", "alt": "Écran d’export Excel du catalogue ARCADE", "caption": "Export Excel configurable du catalogue de données" }
+    ],
+    "skillsAcquired": ["Développement full-stack", "Architecture logicielle", "Conception d’API REST", "Modélisation PostgreSQL", "Tests automatisés", "CI/CD", "Conteneurisation", "Déploiement AWS", "Sécurité des secrets", "Documentation technique"],
+    "sections": [
+      {
+        "title": "Contexte et mission",
+        "subtitle": "Stage de développement full-stack chez Artelia - juin à août 2026.",
+        "items": [
+          {
+            "text": "Développement d’ARCADE, une application interne permettant de centraliser, rechercher, documenter et administrer les métadonnées d’un catalogue de données.",
+            "subItems": []
+          },
+          {
+            "text": "Intervention sur l’ensemble du cycle de vie : conception fonctionnelle et technique, backend, frontend, base de données, tests, documentation et déploiement cloud.",
+            "subItems": []
+          }
+        ]
+      },
+      {
+        "title": "Fonctionnalités réalisées",
+        "subtitle": "Une application métier complète, pensée pour plusieurs profils utilisateurs.",
+        "items": [
+          {
+            "text": "Catalogue de tables et de colonnes avec navigation arborescente, recherche, filtres avancés, édition des métadonnées, catégories, tags et gestion des propriétaires.",
+            "subItems": [
+              "Gestion des suppressions logiques et de l’audit des modifications.",
+              "Détection et traitement des colonnes en doublon.",
+              "Tableaux de bord de complétude et de conformité des métadonnées."
+            ]
+          },
+          {
+            "text": "Import et export Excel, génération de suggestions et synchronisation des métadonnées avec les fichiers de documentation dbt stockés dans Azure DevOps.",
+            "subItems": [
+              "Synchronisation et brouillons distincts par branche Git.",
+              "Suivi des promotions et des pull requests fusionnées.",
+              "Historique des synchronisations et alertes de divergence."
+            ]
+          },
+          {
+            "text": "Gestion des utilisateurs, rôles et autorisations, authentification Okta/JWT, profils utilisateurs et administration des accès par branche.",
+            "subItems": []
+          },
+          {
+            "text": "Notifications métier par e-mail avec modèles HTML et mécanisme de secours pour le développement local.",
+            "subItems": []
+          }
+        ]
+      },
+      {
+        "title": "Architecture technique",
+        "subtitle": "Architecture modulaire séparant clairement présentation, métier et infrastructure.",
+        "items": [
+          {
+            "text": "Frontend Angular 20 et TypeScript organisé par fonctionnalités, avec PrimeNG, Signals/NgRx, formulaires, guards, intercepteurs HTTP et internationalisation.",
+            "subItems": []
+          },
+          {
+            "text": "API REST ASP.NET Core/.NET 10 structurée en couches Application, Infrastructure et Presentation, avec injection de dépendances et services métier testables.",
+            "subItems": []
+          },
+          {
+            "text": "Persistance PostgreSQL avec Entity Framework Core, migrations, contraintes, index, audit automatique et gestion centralisée des suppressions logiques.",
+            "subItems": []
+          }
+        ]
+      },
+      {
+        "title": "Qualité et industrialisation",
+        "subtitle": "Automatisation de la validation, du packaging et de la livraison.",
+        "items": [
+          {
+            "text": "Mise en place et enrichissement des tests unitaires et d’intégration du backend avec xUnit, ainsi que des tests frontend avec Jest.",
+            "subItems": []
+          },
+          {
+            "text": "Conteneurisation du frontend, de l’API et de PostgreSQL, avec environnement local reproductible sous Podman Compose.",
+            "subItems": []
+          },
+          {
+            "text": "Industrialisation AWS via Azure Pipelines : construction des images API et frontend, authentification OIDC sans clés statiques, publication dans Amazon ECR et préparation de l’exécution sur Amazon ECS avec RDS et Secrets Manager.",
+            "subItems": [
+              "Health checks et configuration des tâches ECS.",
+              "Gestion sécurisée des secrets locaux et cloud.",
+              "Documentation d’architecture, d’exploitation, de déploiement et manuel utilisateur."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Résultats quantifiables",
+        "subtitle": "Un périmètre fonctionnel couvert par une base de tests automatisés importante.",
+        "items": [
+          { "text": "Conception et maintenance d’une API métier exposant 50 endpoints.", "subItems": [] },
+          { "text": "493 tests unitaires et 49 tests d’intégration pour sécuriser les règles métier, la persistance et les principaux parcours applicatifs.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Quantitative Portfolio Risk Modeling with GARCH-EVT and Copulas",
+    "description": "Framework modulaire d’estimation du risque extrême d’un portefeuille, combinant volatilité conditionnelle, théorie des valeurs extrêmes et dépendances multivariées.",
+    "technologies": "Python, NumPy, SciPy, Pandas, Matplotlib, GARCH, EVT, Copules, Monte Carlo",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Modélisation du risque", "Séries temporelles", "GARCH", "Théorie des valeurs extrêmes", "Copules", "Monte Carlo", "Backtesting statistique"],
+    "sections": [
+      {
+        "title": "Méthodologie",
+        "subtitle": "Modélisation des pertes conjointes dans des conditions de marché extrêmes.",
+        "items": [
+          { "text": "Acquisition et prétraitement automatisés des données de marché.", "subItems": [] },
+          { "text": "Filtrage de volatilité GARCH(1,1), puis calibration POT-GPD sur les résidus standardisés.", "subItems": ["Construction des marginales EVT par Probability Integral Transform.", "Modélisation de la dépendance avec copules Student-t, Gumbel et gaussienne."] },
+          { "text": "Simulation Monte Carlo à grande échelle des pertes conjointes et estimation de la VaR et de l’Expected Shortfall.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Validation et résultats",
+        "subtitle": "Contrôle statistique de la robustesse des prévisions de risque.",
+        "items": [
+          { "text": "Backtesting en fenêtre glissante avec tests de couverture de Kupiec et d’indépendance de Christoffersen.", "subItems": [] },
+          { "text": "Amélioration des prévisions grâce au filtrage GARCH-EVT et extension du framework d’un portefeuille de deux actifs à un nombre arbitraire d’actifs.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Pricing d’options européennes par Quantum Amplitude Estimation",
+    "description": "Reproduction du pricing d’un call européen par Quantum Amplitude Estimation, en comparant l’approche quantique aux méthodes de Monte Carlo classiques.",
+    "technologies": "Python, NumPy, Qiskit, Black-Scholes, Quantum Amplitude Estimation",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Pricing d’options", "Black-Scholes", "Calcul quantique", "Qiskit", "Conception de circuits", "Analyse d’erreurs numériques"],
+    "sections": [
+      {
+        "title": "Défis techniques",
+        "subtitle": "Passage d’un problème financier continu à une représentation quantique discrète.",
+        "items": [
+          { "text": "Encodage d’une distribution de probabilité financière dans un circuit quantique modulaire.", "subItems": [] },
+          { "text": "Linéarisation du payoff et conversion du profit non linéaire en rotations de qubits.", "subItems": [] },
+          { "text": "Conception d’un comparateur quantique pour déterminer si le prix simulé dépasse le strike.", "subItems": [] },
+          { "text": "Orchestration des registres d’entrée, auxiliaires et de sortie pour assurer la compatibilité avec QAE.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Compétences acquises",
+        "subtitle": "Finance computationnelle et algorithmique quantique.",
+        "items": [
+          { "text": "Manipulation de QuantumCircuit, portes personnalisées, comparateurs et chargement de distributions.", "subItems": [] },
+          { "text": "Analyse des erreurs d’approximation entre Black-Scholes, Monte Carlo classique et estimation quantique.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mini-compilateur Deca",
+    "description": "Compilateur pour Deca, un sous-langage de Java, couvrant l’analyse lexicale et syntaxique ainsi que la génération de code.",
+    "technologies": "Java, ANTLR, Compilation, Tests",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Théorie de la compilation", "Analyse lexicale et syntaxique", "ANTLR", "Java", "Gestion des erreurs", "Tests automatisés"],
+    "sections": [
+      {
+        "title": "Réalisation",
+        "subtitle": "Implémentation des principales étapes d’une chaîne de compilation.",
+        "items": [
+          { "text": "Définition de la grammaire et construction des analyseurs lexical et syntaxique avec ANTLR.", "subItems": [] },
+          { "text": "Vérifications contextuelles, représentation de l’arbre syntaxique abstrait et gestion des erreurs.", "subItems": [] },
+          { "text": "Génération de code et mise en place de tests automatisés pour sécuriser les différents cas du langage.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Statistical Learning & Predictive Modeling",
+    "description": "Implémentation et comparaison de modèles de régression et de classification sur des données biomédicales, génomiques et tabulaires.",
+    "technologies": "Python, NumPy, SciPy, Scikit-learn, Matplotlib, Machine Learning",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Machine learning", "Feature engineering", "Validation croisée", "Sélection de modèles", "Données biomédicales", "Scikit-learn"],
+    "sections": [
+      {
+        "title": "Modèles et validation",
+        "subtitle": "Pipelines prédictifs complets, du prétraitement à l’évaluation.",
+        "items": [
+          { "text": "Régressions linéaire et logistique, Ridge, Lasso, k-NN, Naive Bayes, arbres de décision et forêts aléatoires.", "subItems": [] },
+          { "text": "Feature engineering, sélection de variables, validation croisée et comparaison cohérente des modèles.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Cas d’étude",
+        "subtitle": "Application à plusieurs modalités de données.",
+        "items": [
+          { "text": "Prédiction de l’âge à partir de données de méthylation de l’ADN à haute dimension.", "subItems": [] },
+          { "text": "Classification de signaux EEG d’imagerie motrice et extraction de caractéristiques temporelles.", "subItems": [] },
+          { "text": "Prédiction de survie sur le jeu Titanic avec traitement des valeurs manquantes et encodage catégoriel.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "StockSim - Simulateur boursier et visualisation financière",
+    "description": "Application de simulation boursière permettant de suivre les cours, gérer un portefeuille virtuel et simuler des investissements.",
+    "technologies": "Java, MVC, Observer, Visitor, JSON, Programmation orientée objet",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Programmation orientée objet", "Architecture MVC", "Design patterns", "Simulation financière", "Visualisation de données", "Persistance JSON"],
+    "sections": [
+      {
+        "title": "Architecture",
+        "subtitle": "Conception orientée objet et séparation stricte des responsabilités.",
+        "items": [
+          { "text": "Architecture MVC pour séparer logique métier, affichage et interactions utilisateur.", "subItems": [] },
+          { "text": "Patterns Observer/Observable pour actualiser les cours et Visitor pour traiter et persister les données financières.", "subItems": [] },
+          { "text": "Sauvegarde de l’état des portefeuilles dans des fichiers structurés JSON.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Fonctionnalités",
+        "subtitle": "Simulation et suivi d’un portefeuille financier.",
+        "items": [
+          { "text": "Visualisation graphique dynamique de l’évolution du cours des actions.", "subItems": [] },
+          { "text": "Passage d’ordres d’achat et de vente avec calcul des plus-values, moins-values et mise à jour du solde.", "subItems": [] },
+          { "text": "Tableau de bord global des performances du portefeuille.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Décodeur JPEG - Traitement d’images bas niveau",
+    "description": "Développement en C d’un décodeur JPEG reconstruisant une image matricielle depuis son flux compressé, sans bibliothèque de décodage haut niveau.",
+    "technologies": "C, Makefile, JPEG, Huffman, DCT, Gestion mémoire",
+    "gitHubUrl": "",
+    "images": [],
+    "skillsAcquired": ["Programmation C", "Gestion mémoire", "Manipulation de bits", "Décodage de Huffman", "DCT", "Traitement d’images"],
+    "sections": [
+      {
+        "title": "Algorithmes implémentés",
+        "subtitle": "Reconstruction complète des blocs de pixels conformément au format JPEG.",
+        "items": [
+          { "text": "Lecture et analyse des en-têtes et marqueurs du fichier JPEG.", "subItems": [] },
+          { "text": "Décodage de Huffman, déquantification et transformée en cosinus discrète inverse.", "subItems": [] },
+          { "text": "Conversion YCbCr vers RGB et génération d’une image PPM lisible par un visionneur standard.", "subItems": [] },
+          { "text": "Allocation dynamique, manipulation de bitstreams et contrôle rigoureux de la mémoire.", "subItems": [] }
+        ]
+      }
+    ]
+  }
+]

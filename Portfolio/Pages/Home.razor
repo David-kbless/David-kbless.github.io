@@ -1,0 +1,86 @@
+@page "/"
+
+<PageTitle>Yao David Kossi | Quant Developer</PageTitle>
+<HeadContent>
+    <meta name="description" content="Portfolio de Yao David Kossi, étudiant en ingénierie financière et développeur quantitatif à la recherche d’un stage PFE en 2027." />
+</HeadContent>
+
+<div class="hero-section">
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+            <span class="hero-availability">
+                <span aria-hidden="true"></span>
+                Disponible pour un stage PFE · Avril/Mai 2027
+            </span>
+
+            <p class="hero-eyebrow">Ingénierie financière &amp; développement quantitatif</p>
+
+            <h1 id="hero-title" class="hero-title">
+                Yao David<br />
+                <span>KOSSI</span>
+            </h1>
+
+            <p class="hero-role">Quant Developer · Full-Stack Engineer</p>
+
+            <p class="hero-bio">
+                Je conçois des modèles quantitatifs et des applications robustes pour transformer
+                des problématiques financières complexes en outils clairs, testables et déployables.
+                Je recherche un stage PFE de 6 mois en Quant Dev à partir d'avril ou mai 2027.
+            </p>
+
+            <div class="hero-cta">
+                <a href="/projects" class="btn-primary">Découvrir mes projets <span aria-hidden="true">→</span></a>
+                <a href="/contact" class="btn-secondary">Me contacter</a>
+            </div>
+        </div>
+
+        <div class="hero-profile">
+            <button type="button" class="hero-avatar-wrap" @onclick="OpenLightbox"
+                    aria-label="Agrandir la photo de Yao David Kossi">
+                <img src="profil.jpeg"
+                     alt="Portrait de Yao David Kossi"
+                     loading="eager"
+                     fetchpriority="high"
+                     decoding="async"
+                     class="hero-avatar" />
+            </button>
+            <div class="hero-profile-caption">
+                <strong>Finance · Software · Data</strong>
+                <span>Grenoble INP — Ensimag</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="hero-stats" aria-label="Quelques chiffres">
+        <div>
+            <span class="hero-stat-number">7</span>
+            <span class="hero-stat-label">projets présentés</span>
+        </div>
+        <div>
+            <span class="hero-stat-number">542</span>
+            <span class="hero-stat-label">tests automatisés sur ARCADE</span>
+        </div>
+        <div>
+            <span class="hero-stat-number">3</span>
+            <span class="hero-stat-label">piliers : finance, software, data</span>
+        </div>
+    </div>
+</div>
+
+@if (lightboxOpen)
+{
+    <div class="lightbox-overlay" role="dialog" aria-modal="true"
+         aria-label="Portrait de Yao David Kossi" @onclick="CloseLightbox">
+        <div class="lightbox-content" @onclick:stopPropagation="true">
+            <button type="button" class="lightbox-close" @onclick="CloseLightbox" aria-label="Fermer">✕</button>
+            <img src="profil.jpeg" alt="Portrait de Yao David Kossi"
+                 decoding="async" class="lightbox-photo" />
+        </div>
+    </div>
+}
+
+@code {
+    private bool lightboxOpen;
+    private void OpenLightbox() => lightboxOpen = true;
+    private void CloseLightbox() => lightboxOpen = false;
+}

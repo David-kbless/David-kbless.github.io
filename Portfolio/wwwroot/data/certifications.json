@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Réalisez des rapports statistiques clairs et impactants",
+    "issuer": "OpenClassrooms · ENSAE-ENSAI Formation Continue (CEPE)",
+    "date": "30 août 2023",
+    "description": "Formation consacrée à la structuration, à l’interprétation et à la communication de résultats statistiques auprès de différents publics.",
+    "skillsAcquired": ["Analyse statistique", "Choix d’indicateurs", "Data visualisation", "Communication des résultats", "Rapports décisionnels"],
+    "certificateUrl": "certifications/rapports-statistiques-openclassrooms.pdf",
+    "credentialId": "2542920419",
+    "credentialUrl": ""
+  },
+  {
+    "title": "Initiez-vous à Python pour l'analyse de données",
+    "issuer": "OpenClassrooms",
+    "date": "5 juillet 2023",
+    "description": "Introduction à Python appliqué à la manipulation, l’exploration et l’analyse de jeux de données.",
+    "skillsAcquired": ["Python", "Structures de données", "Manipulation de données", "Analyse exploratoire", "Automatisation"],
+    "certificateUrl": "certifications/python-analyse-donnees-openclassrooms.pdf",
+    "credentialId": "8312724150",
+    "credentialUrl": ""
+  },
+  {
+    "title": "Perfectionnez-vous sur Excel",
+    "issuer": "OpenClassrooms",
+    "date": "27 mai 2023",
+    "description": "Approfondissement des fonctions d’Excel pour analyser des données et construire des restitutions efficaces.",
+    "skillsAcquired": ["Fonctions avancées", "Analyse de données", "Tableaux croisés dynamiques", "Graphiques", "Productivité"],
+    "certificateUrl": "certifications/excel-perfectionnement-openclassrooms.pdf",
+    "credentialId": "9890406404",
+    "credentialUrl": ""
+  },
+  {
+    "title": "Maîtrisez les fondamentaux d'Excel",
+    "issuer": "OpenClassrooms",
+    "date": "25 mai 2023",
+    "description": "Acquisition des bases nécessaires pour organiser, calculer, mettre en forme et présenter des données dans Excel.",
+    "skillsAcquired": ["Formules essentielles", "Mise en forme", "Tri et filtres", "Organisation des données", "Graphiques"],
+    "certificateUrl": "certifications/excel-fondamentaux-openclassrooms.pdf",
+    "credentialId": "7768210836",
+    "credentialUrl": ""
+  },
+  {
+    "title": "Mathématiques fondamentales",
+    "issuer": "CNAM",
+    "date": "",
+    "description": "Consolidation des bases mathématiques nécessaires à la modélisation et au raisonnement scientifique.",
+    "skillsAcquired": ["Raisonnement mathématique", "Analyse", "Algèbre", "Résolution de problèmes"],
+    "certificateUrl": "",
+    "credentialId": "",
+    "credentialUrl": ""
+  },
+  {
+    "title": "Préparation mathématiques",
+    "issuer": "Polytech Paris",
+    "date": "",
+    "description": "Programme de préparation renforçant les méthodes de travail et les fondamentaux mathématiques pour les études d’ingénieur.",
+    "skillsAcquired": ["Méthodologie", "Calcul", "Logique", "Préparation aux études d’ingénieur"],
+    "certificateUrl": "",
+    "credentialId": "",
+    "credentialUrl": ""
+  }
+]

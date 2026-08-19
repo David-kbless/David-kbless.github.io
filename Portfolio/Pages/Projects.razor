@@ -1,0 +1,244 @@
+@page "/projects"
+@using Portfolio.Components
+@using Portfolio.Models
+@using Portfolio.Services
+@inject IProjectService ProjectService
+@inject IJSRuntime JS
+@implements IAsyncDisposable
+
+<PageTitle>Projets | Yao David Kossi</PageTitle>
+<HeadContent>
+    <meta name="description" content="Découvrez les projets de Yao David Kossi en développement logiciel, finance quantitative et data." />
+    <meta property="og:title" content="Projets | Yao David Kossi" />
+    <meta property="og:description" content="Applications et modèles à l’intersection de la finance et de l’informatique." />
+    <meta property="og:type" content="website" />
+</HeadContent>
+
+<div class="fullbg-page bg-bourse">
+    <div class="page-header fullbg-header">
+        <span class="eyebrow">Réalisations</span>
+        <h1>Mes Projets</h1>
+        <p>Applications et modèles à l'intersection de la finance et de l'informatique.</p>
+    </div>
+    <div class="projects-page">
+        @if (isLoading)
+        {
+            <p role="status">Chargement des projets…</p>
+        }
+        else if (loadError)
+        {
+            <p role="alert">Les projets sont momentanément indisponibles.</p>
+        }
+        else
+        {
+            <div class="projects-grid">
+                @foreach (var project in projects)
+                {
+                    <ProjectCard Project="project" OnDetailsRequested="OpenModalAsync" />
+                }
+            </div>
+        }
+    </div>
+</div>
+
+@if (selectedProject is not null)
+{
+    <div class="project-modal-overlay" @onclick="CloseModalAsync">
+        <div class="project-modal" role="dialog" aria-modal="true"
+             aria-labelledby="project-modal-title" aria-describedby="project-modal-description"
+             @onclick:stopPropagation="true">
+            <div class="project-modal-header">
+                <div>
+                    <div class="tech-tags" style="margin-bottom: 0.875rem;">
+                        @foreach (var technology in GetTechnologies(selectedProject))
+                        {
+                            <span class="tech-tag">@technology</span>
+                        }
+                    </div>
+                    <h2 id="project-modal-title" class="project-modal-title">@selectedProject.Title</h2>
+                    <p id="project-modal-description" class="project-modal-desc">@selectedProject.Description</p>
+                    @if (selectedProject.SkillsAcquired.Count > 0)
+                    {
+                        <div class="project-skills-summary" aria-label="Compétences acquises">
+                            <strong>Compétences acquises</strong>
+                            <span>@string.Join(" · ", selectedProject.SkillsAcquired)</span>
+                        </div>
+                    }
+                </div>
+                <button type="button" class="project-modal-close" @onclick="CloseModalAsync" aria-label="Fermer la fenêtre">×</button>
+            </div>
+            <div class="project-modal-tabs" role="tablist" aria-label="Contenu du projet">
+                <button type="button" role="tab" class="@(activeTab == ProjectTab.Details ? "active" : null)"
+                        aria-selected="@(activeTab == ProjectTab.Details)"
+                        @onclick="() => activeTab = ProjectTab.Details">
+                    Détails
+                </button>
+                <button type="button" role="tab" class="@(activeTab == ProjectTab.Images ? "active" : null)"
+                        aria-selected="@(activeTab == ProjectTab.Images)"
+                        @onclick="() => activeTab = ProjectTab.Images">
+                    Images (@ValidImages.Count)
+                </button>
+            </div>
+            <div class="project-modal-body" role="tabpanel">
+                @if (activeTab == ProjectTab.Images)
+                {
+                    <section class="project-gallery" aria-labelledby="project-gallery-title">
+                        <h3 id="project-gallery-title" class="project-modal-section-title">Aperçu du projet</h3>
+                        @if (ValidImages.Count == 0)
+                        {
+                            <p class="project-gallery-empty">Aucune capture n’a encore été ajoutée pour ce projet.</p>
+                        }
+                        else
+                        {
+                            <div class="project-gallery-grid">
+                                @foreach (var image in ValidImages)
+                                {
+                                    <button type="button" class="project-gallery-item"
+                                            @onclick="() => OpenImageAsync(image)"
+                                            aria-label="Agrandir : @GetImageAlt(image)">
+                                        <img src="@image.Url" alt="@GetImageAlt(image)" loading="lazy" decoding="async" />
+                                        @if (!string.IsNullOrWhiteSpace(image.Caption))
+                                        {
+                                            <span>@image.Caption</span>
+                                        }
+                                    </button>
+                                }
+                            </div>
+                        }
+                    </section>
+                }
+                else
+                {
+                    @foreach (var section in selectedProject.Sections)
+                    {
+                        <section class="project-modal-section">
+                            <h3 class="project-modal-section-title">@section.Title</h3>
+                            @if (!string.IsNullOrWhiteSpace(section.Subtitle))
+                            {
+                                <p class="project-modal-section-subtitle">@section.Subtitle</p>
+                            }
+                            <ul class="project-modal-list">
+                                @foreach (var bullet in section.Items)
+                                {
+                                    <li>
+                                        @bullet.Text
+                                        @if (bullet.SubItems.Count > 0)
+                                        {
+                                            <ul class="project-modal-sublist">
+                                                @foreach (var item in bullet.SubItems)
+                                                {
+                                                    <li>@item</li>
+                                                }
+                                            </ul>
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                        </section>
+                    }
+                }
+            </div>
+            @if (!string.IsNullOrWhiteSpace(selectedProject.GitHubUrl))
+            {
+                <div class="project-modal-footer">
+                    <a href="@selectedProject.GitHubUrl" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                        Voir sur GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+}
+
+@if (selectedImage is not null)
+{
+    <div class="project-image-viewer" role="dialog" aria-modal="true"
+         aria-label="Aperçu de l’image du projet" @onclick="CloseImage">
+        <div class="project-image-viewer-content" @onclick:stopPropagation="true">
+            <button type="button" class="project-image-viewer-close" @onclick="CloseImage"
+                    aria-label="Fermer l’aperçu">×</button>
+            <img src="@selectedImage.Url" alt="@GetImageAlt(selectedImage)" />
+            @if (!string.IsNullOrWhiteSpace(selectedImage.Caption))
+            {
+                <p>@selectedImage.Caption</p>
+            }
+        </div>
+    </div>
+}
+
+@code {
+    private IReadOnlyList<Project> projects = [];
+    private Project? selectedProject;
+    private ProjectImage? selectedImage;
+    private ProjectTab activeTab = ProjectTab.Details;
+    private IJSObjectReference? modalModule;
+    private DotNetObjectReference<Projects>? dotNetReference;
+    private bool isLoading = true;
+    private bool loadError;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try { projects = await ProjectService.GetProjectsAsync(); }
+        catch (HttpRequestException) { loadError = true; }
+        catch (NotSupportedException) { loadError = true; }
+        finally { isLoading = false; }
+    }
+
+    private static IEnumerable<string> GetTechnologies(Project project) => project.Technologies
+        .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+    private static bool IsValidImage(ProjectImage image) => !string.IsNullOrWhiteSpace(image.Url);
+    private IReadOnlyList<ProjectImage> ValidImages => selectedProject?.Images.Where(IsValidImage).ToList() ?? [];
+    private static string GetImageAlt(ProjectImage image) => string.IsNullOrWhiteSpace(image.Alt)
+        ? "Capture d’écran du projet"
+        : image.Alt;
+
+    private async Task OpenImageAsync(ProjectImage image)
+    {
+        selectedImage = image;
+        await InvokeAsync(StateHasChanged);
+        if (modalModule is not null) await modalModule.InvokeVoidAsync("focusImageViewer");
+    }
+    private void CloseImage() => selectedImage = null;
+
+    private async Task OpenModalAsync(Project project)
+    {
+        selectedProject = project;
+        activeTab = ProjectTab.Details;
+        await InvokeAsync(StateHasChanged);
+        modalModule ??= await JS.InvokeAsync<IJSObjectReference>("import", "./js/projectModal.js");
+        dotNetReference ??= DotNetObjectReference.Create(this);
+        await modalModule.InvokeVoidAsync("open", dotNetReference);
+    }
+
+    [JSInvokable]
+    public Task CloseFromJavaScript()
+    {
+        if (selectedImage is not null)
+        {
+            selectedImage = null;
+            return InvokeAsync(StateHasChanged);
+        }
+
+        return CloseModalAsync();
+    }
+
+    private async Task CloseModalAsync()
+    {
+        selectedImage = null;
+        selectedProject = null;
+        if (modalModule is not null) await modalModule.InvokeVoidAsync("close");
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (modalModule is not null)
+        {
+            await modalModule.InvokeVoidAsync("close");
+            await modalModule.DisposeAsync();
+        }
+        dotNetReference?.Dispose();
+    }
+
+    private enum ProjectTab { Details, Images }
+}

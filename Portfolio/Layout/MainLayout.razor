@@ -1,0 +1,14 @@
+@inherits LayoutComponentBase
+
+<!-- Conteneur principal : navbar + contenu de la page active -->
+<div class="layout">
+
+    <!-- Barre de navigation persistante en haut de l'écran -->
+    <NavMenu />
+
+    <!-- Zone principale : @Body affiche la page correspondant à la route active -->
+    <main class="main-content">
+        @Body
+    </main>
+
+</div>

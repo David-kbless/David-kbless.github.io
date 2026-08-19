@@ -1,0 +1,112 @@
+@page "/certifications"
+@using Portfolio.Models
+@inject HttpClient Http
+
+<PageTitle>Certifications | Yao David Kossi</PageTitle>
+<HeadContent>
+    <meta name="description" content="Certifications, attestations et compétences complémentaires de Yao David Kossi." />
+</HeadContent>
+
+<div class="fullbg-page bg-buildings">
+    <div class="page-header fullbg-header">
+        <span class="eyebrow">Formation continue</span>
+        <h1>Certifications</h1>
+        <p>Attestations, connaissances acquises et compétences développées en complément de mon cursus.</p>
+    </div>
+
+    <main class="certifications-page">
+        @if (isLoading)
+        {
+            <p class="certifications-status" role="status">Chargement des certifications…</p>
+        }
+        else if (loadError)
+        {
+            <p class="certifications-status" role="alert">Les certifications sont momentanément indisponibles.</p>
+        }
+        else
+        {
+            <div class="certifications-grid">
+                @foreach (var certification in certifications)
+                {
+                    <article class="certification-card">
+                        <div class="certification-card-topline">
+                            <span class="certification-issuer">@certification.Issuer</span>
+                            @if (!string.IsNullOrWhiteSpace(certification.Date))
+                            {
+                                <time>@certification.Date</time>
+                            }
+                        </div>
+
+                        <h2>@certification.Title</h2>
+                        <p class="certification-description">@certification.Description</p>
+
+                        @if (!string.IsNullOrWhiteSpace(certification.CredentialId))
+                        {
+                            <p class="certification-credential">
+                                Certificat n° <strong>@certification.CredentialId</strong>
+                            </p>
+                        }
+
+                        @if (certification.SkillsAcquired.Count > 0)
+                        {
+                            <div class="certification-skills">
+                                <h3>Compétences acquises</h3>
+                                <div class="certification-tags">
+                                    @foreach (var skill in certification.SkillsAcquired)
+                                    {
+                                        <span>@skill</span>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        <div class="certification-actions">
+                            @if (!string.IsNullOrWhiteSpace(certification.CertificateUrl))
+                            {
+                                <a href="@certification.CertificateUrl" target="_blank" rel="noopener noreferrer"
+                                   class="btn-primary">Voir l'attestation</a>
+                                <a href="@certification.CertificateUrl" download class="certification-download">Télécharger</a>
+                            }
+                            else
+                            {
+                                <span class="certification-pending">Attestation à ajouter</span>
+                            }
+
+                            @if (!string.IsNullOrWhiteSpace(certification.CredentialUrl))
+                            {
+                                <a href="@certification.CredentialUrl" target="_blank" rel="noopener noreferrer"
+                                   class="certification-verify">Vérifier l'identifiant <span aria-hidden="true">↗</span></a>
+                            }
+                        </div>
+                    </article>
+                }
+            </div>
+        }
+    </main>
+</div>
+
+@code {
+    private IReadOnlyList<Certification> certifications = [];
+    private bool isLoading = true;
+    private bool loadError;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            certifications = await Http.GetFromJsonAsync<List<Certification>>("data/certifications.json") ?? [];
+        }
+        catch (HttpRequestException)
+        {
+            loadError = true;
+        }
+        catch (NotSupportedException)
+        {
+            loadError = true;
+        }
+        finally
+        {
+            isLoading = false;
+        }
+    }
+}

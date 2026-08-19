@@ -1,0 +1,38 @@
+<!-- Barre de navigation horizontale fixée en haut de l'écran -->
+<nav class="navbar">
+
+    <!-- Logo à gauche : initiales + point accent -->
+    <div class="navbar-logo">
+        <a href="/" aria-label="Yao David Kossi — Accueil">
+            <img src="ydk-logo.svg" alt="" aria-hidden="true" />
+        </a>
+    </div>
+
+    <!-- Liens de navigation (desktop : visibles / mobile : menu déroulant) -->
+    <div class="navbar-links @(menuOpen ? "open" : "")">
+        <NavLink href="" Match="NavLinkMatch.All">Accueil</NavLink>
+        <NavLink href="projects">Projets</NavLink>
+        <NavLink href="skills">Compétences</NavLink>
+        <NavLink href="certifications">Certifications</NavLink>
+        <NavLink href="cv">CV</NavLink>
+        <NavLink href="contact">Contact</NavLink>
+    </div>
+
+    <!-- Bouton hamburger visible uniquement sur mobile -->
+    <button class="navbar-toggle @(menuOpen ? "active" : "")"
+            @onclick="ToggleMenu"
+            aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</nav>
+
+@code {
+    /* Contrôle l'ouverture du menu mobile */
+    private bool menuOpen = false;
+
+    /* Bascule l'état ouvert/fermé du menu */
+    private void ToggleMenu() => menuOpen = !menuOpen;
+}
