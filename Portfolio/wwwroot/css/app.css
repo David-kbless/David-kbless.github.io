@@ -1851,17 +1851,21 @@ button {
 
     .project-modal {
         width: min(100%, 560px);
+        height: calc(100dvh - 1rem);
         max-height: calc(100dvh - 1rem);
         border-radius: 14px;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
         overscroll-behavior: contain;
         -webkit-overflow-scrolling: touch;
     }
 
     .project-modal-header {
         gap: 0.65rem;
+        max-height: 36dvh;
         padding: 1rem 1rem 0.85rem;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
     }
 
     .project-modal-header .tech-tags {
@@ -1900,9 +1904,9 @@ button {
     }
 
     .project-modal-tabs {
-        position: sticky;
-        top: 0;
-        z-index: 2;
+        position: relative;
+        z-index: 1;
+        flex-shrink: 0;
         gap: 0.2rem;
         padding: 0 1rem;
         background: var(--surface);
@@ -1916,8 +1920,12 @@ button {
     }
 
     .project-modal-body {
-        flex: none;
-        overflow: visible;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
         gap: 1.25rem;
         padding: 1rem;
     }
