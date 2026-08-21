@@ -211,7 +211,7 @@
     ]
   },
   {
-    "title": "StockSim — Moteur de marché et simulateur boursier",
+    "title": "StockSim - Moteur de marché et simulateur boursier",
     "description": "Application desktop et CLI en Java 17 simulant un marché financier : cours en temps réel, ordres de marché, à cours limité et stop-loss, portefeuille valorisé, indices composites et persistance complète de la simulation.",
     "technologies": "Java 17, Swing, Maven, JUnit 5, MVC, Design Patterns, JSON, CSV Yahoo Finance",
     "gitHubUrl": "https://github.com/adamiassamen/Simu-Boursiere-ACOL",
