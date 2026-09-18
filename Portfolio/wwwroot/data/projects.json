@@ -110,10 +110,79 @@
     ]
   },
   {
+    "title": "Moteur de backtesting de stratégies de couverture financière",
+    "description": "Développement, dans un cadre académique, d’un moteur de backtesting en C# / .NET pour simuler la couverture d’options sur un panier d’actions à partir de données de marché et comparer deux stratégies de rééquilibrage du portefeuille.",
+    "technologies": "C#, .NET 10, PricingLibrary, JSON, CSV, Python, Pandas, Matplotlib, Jupyter, GitLab CI/CD",
+    "gitHubUrl": "https://github.com/David-kbless/SSD_Ensi",
+    "images": [],
+    "skillsAcquired": ["Programmation orientée objet", "Architecture modulaire", "Traitement de données financières", "Simulation de stratégies de couverture"],
+    "sections": [
+      {
+        "title": "Simulation et stratégies de couverture",
+        "subtitle": "Étude de deux stratégies de rééquilibrage du portefeuille dans un cadre académique.",
+        "items": [
+          { "text": "Simulation de la couverture d’options sur un panier d’actions à partir de données de marché.", "subItems": [] },
+          { "text": "Comparaison de deux stratégies de rééquilibrage : à intervalles réguliers ou lorsqu’un seuil de variation des cours est dépassé.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Données et valorisation",
+        "subtitle": "Un moteur en C# / .NET organisé selon une architecture modulaire.",
+        "items": [
+          { "text": "Import des données de marché au format CSV et des paramètres de simulation au format JSON.", "subItems": [] },
+          { "text": "Utilisation de PricingLibrary pour calculer le prix des options et leurs sensibilités (deltas).", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Analyse des résultats",
+        "subtitle": "Exploitation des résultats dans un notebook Python avec Pandas et Matplotlib.",
+        "items": [
+          { "text": "Export des résultats de simulation pour comparer l’évolution du portefeuille à celle de l’option.", "subItems": [] },
+          { "text": "Examen des coûts de transaction associés aux stratégies de couverture.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "PCPD - Valorisation et couverture de produits dérivés",
+    "description": "Développement d’un moteur de calcul en C++ pour valoriser des options financières par simulations de Monte-Carlo et simuler leur couverture dynamique, avec un modèle de Black-Scholes multidimensionnel intégrant les corrélations entre actifs.",
+    "technologies": "C++, PNL, CMake, Google Test, JSON, Python",
+    "gitHubUrl": "https://github.com/David-kbless/PCPD",
+    "images": [],
+    "skillsAcquired": ["Finance quantitative", "Méthodes numériques", "Valorisation par Monte-Carlo", "Couverture dynamique", "Programmation orientée objet", "Tests unitaires", "Génie logiciel"],
+    "sections": [
+      {
+        "title": "Modélisation et valorisation",
+        "subtitle": "Simulations de Monte-Carlo dans un modèle de Black-Scholes multidimensionnel.",
+        "items": [
+          { "text": "Prise en compte des corrélations entre actifs pour simuler les trajectoires de marché.", "subItems": [] },
+          { "text": "Valorisation de plusieurs types d’options : panier, asiatiques et de performance.", "subItems": [] },
+          { "text": "Calcul du prix des options, de leurs sensibilités (deltas) et des erreurs statistiques associées.", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Couverture dynamique",
+        "subtitle": "Simulation d’une stratégie de couverture et mesure de son résultat.",
+        "items": [
+          { "text": "Simulation du rééquilibrage d’un portefeuille de couverture.", "subItems": [] },
+          { "text": "Mesure du résultat final de la stratégie (P&L).", "subItems": [] }
+        ]
+      },
+      {
+        "title": "Architecture et validation",
+        "subtitle": "Un projet à la croisée de la finance quantitative, des méthodes numériques et du génie logiciel.",
+        "items": [
+          { "text": "Conception d’une architecture orientée objet en C++17.", "subItems": [] },
+          { "text": "Tests unitaires avec Google Test et scripts de comparaison automatisée pour valider les calculs.", "subItems": [] }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Quantitative Portfolio Risk Modeling with GARCH-EVT and Copulas",
     "description": "Framework modulaire d’estimation du risque extrême d’un portefeuille, combinant volatilité conditionnelle, théorie des valeurs extrêmes et dépendances multivariées.",
     "technologies": "Python, NumPy, SciPy, Pandas, Matplotlib, GARCH, EVT, Copules, Monte Carlo",
-    "gitHubUrl": "",
+    "gitHubUrl": "https://github.com/David-kbless/Portfolio-risk-modeling",
     "images": [],
     "skillsAcquired": ["Modélisation du risque", "Séries temporelles", "GARCH", "Théorie des valeurs extrêmes", "Copules", "Monte Carlo", "Backtesting statistique"],
     "sections": [
@@ -140,8 +209,14 @@
     "title": "Pricing d’options européennes par Quantum Amplitude Estimation",
     "description": "Reproduction du pricing d’un call européen par Quantum Amplitude Estimation, en comparant l’approche quantique aux méthodes de Monte Carlo classiques.",
     "technologies": "Python, NumPy, Qiskit, Black-Scholes, Quantum Amplitude Estimation",
-    "gitHubUrl": "",
-    "images": [],
+    "gitHubUrl": "https://github.com/David-kbless/QAE",
+    "images": [
+      {"url": "images/QAE/pricer.png", "alt": "Pricing d’options européennes - QAE", "caption": "Pricing d’options européennes"},
+      {"url": "images/QAE/approx_bs.png", "alt": "Approximation du prix de Black-Scholes - QAE", "caption": "Approximation du prix de Black-Scholes"},
+      {"url": "images/QAE/comparison_qae.png", "alt": "Comparaison des résultats de Quantum Amplitude Estimation - QAE", "caption": "Comparaison des résultats de Quantum Amplitude Estimation"},
+      {"url": "images/QAE/proba_dist.png", "alt": "Distribution de probabilité - QAE", "caption": "Distribution de probabilité"},
+      {"url": "images/QAE/gauss_dist.png", "alt": "Distribution gaussienne - QAE", "caption": "Distribution gaussienne"}
+    ],
     "skillsAcquired": ["Pricing d’options", "Black-Scholes", "Calcul quantique", "Qiskit", "Conception de circuits", "Analyse d’erreurs numériques"],
     "sections": [
       {
@@ -168,7 +243,7 @@
     "title": "Mini-compilateur Deca",
     "description": "Compilateur pour Deca, un sous-langage de Java, couvrant l’analyse lexicale et syntaxique ainsi que la génération de code.",
     "technologies": "Java, ANTLR, Compilation, Tests",
-    "gitHubUrl": "",
+    "gitHubUrl": "https://github.com/David-kbless/compilateur-Deca",
     "images": [],
     "skillsAcquired": ["Théorie de la compilation", "Analyse lexicale et syntaxique", "ANTLR", "Java", "Gestion des erreurs", "Tests automatisés"],
     "sections": [
@@ -184,11 +259,25 @@
     ]
   },
   {
-    "title": "Statistical Learning & Predictive Modeling",
+    "title": "Statistical Learning & Predictive Modeling (QRT data challenge)",
     "description": "Implémentation et comparaison de modèles de régression et de classification sur des données biomédicales, génomiques et tabulaires.",
     "technologies": "Python, NumPy, SciPy, Scikit-learn, Matplotlib, Machine Learning",
-    "gitHubUrl": "",
-    "images": [],
+    "gitHubUrl": "https://github.com/David-kbless/Predictive-models",
+    "images": [
+      {"url": "images/Predictive-models/02_valeurs_manquantes.png", "alt": "Analyse des valeurs manquantes - QRT data challenge", "caption": "Analyse des valeurs manquantes"},
+      {"url": "images/Predictive-models/03_distributions.png", "alt": "Distributions des variables - QRT data challenge", "caption": "Distributions des variables"},
+      {"url": "images/Predictive-models/03_distributions_target_RET.png", "alt": "Distributions de la cible et des rendements RET - QRT data challenge", "caption": "Distributions de la cible et des rendements RET"},
+      {"url": "images/Predictive-models/03_distributions_volumes.png", "alt": "Distributions des volumes - QRT data challenge", "caption": "Distributions des volumes"},
+      {"url": "images/Predictive-models/03b_scatter_RET1_target.png", "alt": "Relation entre RET1 et la cible - QRT data challenge", "caption": "Relation entre RET1 et la cible"},
+      {"url": "images/Predictive-models/03b_scatter_matrix.png", "alt": "Matrice de dispersion des variables - QRT data challenge", "caption": "Matrice de dispersion des variables"},
+      {"url": "images/Predictive-models/03b_target_par_GROUP.png", "alt": "Distribution de la cible par groupe - QRT data challenge", "caption": "Distribution de la cible par groupe"},
+      {"url": "images/Predictive-models/05_correlations_cible.png", "alt": "Corrélations des variables avec la cible - QRT data challenge", "caption": "Corrélations des variables avec la cible"},
+      {"url": "images/Predictive-models/05_correlations_spearman_cible.png", "alt": "Corrélations de Spearman avec la cible - QRT data challenge", "caption": "Corrélations de Spearman avec la cible"},
+      {"url": "images/Predictive-models/05_multicolinearite_features.png", "alt": "Multicolinéarité des variables explicatives - QRT data challenge", "caption": "Multicolinéarité des variables explicatives"},
+      {"url": "images/Predictive-models/06_derive_train_test.png", "alt": "Dérive entre les données d’entraînement et de test - QRT data challenge", "caption": "Dérive entre les données d’entraînement et de test"},
+      {"url": "images/Predictive-models/06_stabilite_temporelle_cible.png", "alt": "Stabilité temporelle de la cible - QRT data challenge", "caption": "Stabilité temporelle de la cible"},
+      {"url": "images/Predictive-models/stabilite_features_par_periode.png", "alt": "Stabilité des variables par période - QRT data challenge", "caption": "Stabilité des variables par période"}
+    ],
     "skillsAcquired": ["Machine learning", "Feature engineering", "Validation croisée", "Sélection de modèles", "Données biomédicales", "Scikit-learn"],
     "sections": [
       {
@@ -215,7 +304,12 @@
     "description": "Application desktop et CLI en Java 17 simulant un marché financier : cours en temps réel, ordres de marché, à cours limité et stop-loss, portefeuille valorisé, indices composites et persistance complète de la simulation.",
     "technologies": "Java 17, Swing, Maven, JUnit 5, MVC, Design Patterns, JSON, CSV Yahoo Finance",
     "gitHubUrl": "https://github.com/adamiassamen/Simu-Boursiere-ACOL",
-    "images": [],
+    "images": [
+      {"url": "images/stockSim/Marches.png", "alt": "Vue des marchés boursiers - stockSim", "caption": "Vue des marchés boursiers"},
+      {"url": "images/stockSim/comptes.png", "alt": "Gestion des comptes - stockSim", "caption": "Gestion des comptes"},
+      {"url": "images/stockSim/ordres.png", "alt": "Gestion des ordres de bourse - stockSim", "caption": "Gestion des ordres de bourse"},
+      {"url": "images/stockSim/portefeuille.png", "alt": "Suivi du portefeuille - stockSim", "caption": "Suivi du portefeuille"}
+    ],
     "skillsAcquired": ["Modélisation d’un domaine financier", "Architecture MVC en couches", "Design patterns GoF", "Moteur de simulation événementiel", "Interface Java Swing", "Tests unitaires JUnit 5", "Persistance JSON", "Import et export CSV"],
     "sections": [
       {
@@ -254,7 +348,7 @@
     "title": "Décodeur JPEG - Traitement d’images bas niveau",
     "description": "Développement en C d’un décodeur JPEG reconstruisant une image matricielle depuis son flux compressé, sans bibliothèque de décodage haut niveau.",
     "technologies": "C, Makefile, JPEG, Huffman, DCT, Gestion mémoire",
-    "gitHubUrl": "",
+    "gitHubUrl": "https://github.com/David-kbless/DecodeurJPEG",
     "images": [],
     "skillsAcquired": ["Programmation C", "Gestion mémoire", "Manipulation de bits", "Décodage de Huffman", "DCT", "Traitement d’images"],
     "sections": [

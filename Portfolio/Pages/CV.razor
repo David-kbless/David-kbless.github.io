@@ -20,9 +20,14 @@
                 <h2>Curriculum Vitae</h2>
                 <p>Recherche d'un stage PFE de 6 mois en Quant Dev - avril ou mai 2027</p>
             </div>
-            <a href="cv.pdf" download="CV_Yao_David_KOSSI.pdf" class="btn-primary cv-download-btn">
-                Télécharger le CV
-            </a>
+            <div class="cv-download-actions">
+                <a href="cv_quant-dev_fr.pdf" download="CV_Yao_David_KOSSI_FR.pdf" hreflang="fr" type="application/pdf" class="btn-primary cv-download-btn">
+                    Télécharger le CV français
+                </a>
+                <a href="cv_quant-dev_en.pdf" download="CV_Yao_David_KOSSI_EN.pdf" hreflang="en" type="application/pdf" class="btn-primary cv-download-btn">
+                    Télécharger le CV anglais
+                </a>
+            </div>
         </div>
 
         <section class="cv-section">
@@ -65,7 +70,8 @@
                 <CvEntry Date="Juin - août 2026" Title="Développeur Full-Stack - Stage"
                          Place="Artelia · Projet ARCADE"
                          Description="Conception d'une application de catalogue de données avec Angular, ASP.NET Core et PostgreSQL. API de 50 endpoints, 493 tests unitaires, 49 tests d'intégration, conteneurisation et chaîne de livraison AWS ECR/ECS." />
-                <CvEntry Date="Déc. 2024 - présent" Title="Agent de restauration"
+                <CvEntry Date="Déc. 2024 - présent" Title="Agent de restauration - Assistant de direction"
+                         Description="Agent de restauration sur une période et assistant de direction par la suite."
                          Place="DomusVi" />
                 <CvEntry Date="Sept. - déc. 2024" Title="Tuteur en mathématiques et informatique"
                          Place="Université Grenoble Alpes"
@@ -78,15 +84,21 @@
         <section class="cv-section">
             <h2 class="cv-section-title"><span aria-hidden="true">⌁</span> Projets techniques sélectionnés</h2>
             <div class="cv-timeline">
-                <CvEntry Date="Depuis fév. 2026" Title="Statistical Learning"
+                <CvEntry Date="Projet académique" Title="Moteur de backtesting de stratégies de couverture financière"
+                         Place="C# · .NET · Python · Pandas"
+                         Description="Simulation de la couverture d’options sur un panier d’actions, calcul des deltas avec PricingLibrary et comparaison de rééquilibrages périodiques ou déclenchés par un seuil, avec analyse des coûts de transaction." />
+                <CvEntry Date="Projet académique" Title="PCPD - Valorisation et couverture de produits dérivés"
+                         Place="C++17 · PNL · CMake · Google Test"
+                         Description="Valorisation d’options panier, asiatiques et de performance par Monte Carlo dans un modèle de Black-Scholes multidimensionnel. Calcul des deltas, simulation de couverture dynamique et mesure du P&amp;L." />
+                <CvEntry Date="Depuis fév. 2026" Title="Statistical Learning &amp; Predictive Modeling (QRT data challenge)"
                          Place="Python · Scikit-learn"
-                         Description="Modèles de régression et classification, feature engineering, validation croisée et analyse de données biomédicales et génomiques." />
+                         Description="Régression et classification, feature engineering et validation croisée. Analyse exploratoire pour le challenge QRT : valeurs manquantes, corrélations, multicolinéarité et stabilité des données entre périodes et jeux d’entraînement et de test." />
                 <CvEntry Date="2026" Title="Risque extrême - GARCH, EVT et copules"
                          Place="Python · Finance quantitative"
                          Description="Estimation de VaR et Expected Shortfall, simulation Monte Carlo et backtesting avec les tests de Kupiec et Christoffersen." />
                 <CvEntry Date="2026" Title="Pricing quantique d'options européennes"
                          Place="Python · Qiskit · QAE"
-                         Description="Construction de circuits quantiques pour comparer le pricing par Quantum Amplitude Estimation aux méthodes classiques." />
+                         Description="Encodage de distributions financières et du payoff dans des circuits Qiskit. Comparaison du pricing par Quantum Amplitude Estimation avec Black-Scholes et Monte Carlo, et analyse des erreurs numériques." />
                 <CvEntry Date="Jan. 2026" Title="Mini-compilateur Deca"
                          Place="Java · ANTLR4"
                          Description="Analyse lexicale et syntaxique, contrôles contextuels et génération de code." />
@@ -97,8 +109,8 @@
                          Place="C · Traitement d'images"
                          Description="Décodage de Huffman, DCT inverse, manipulation de bitstreams et gestion optimisée de la mémoire." />
                 <CvEntry Date="2025" Title="StockSim - simulateur boursier"
-                         Place="Java · MVC · Design patterns"
-                         Description="Suivi de cours, gestion d'un portefeuille virtuel, passage d'ordres et visualisation des performances." />
+                         Place="Java 17 · Swing · Maven · JUnit 5 · MVC"
+                         Description="Moteur de marché événementiel avec interfaces graphique et CLI, ordres de marché, à cours limité et stop-loss, valorisation du portefeuille et persistance JSON/CSV. Architecture MVC et design patterns." />
                 <CvEntry Date="Avril 2025" Title="Analyse statistique et simulation numérique"
                          Place="R · Python"
                          Description="Tests d'hypothèses, intervalles de confiance et simulation du système dynamique de Lotka–Volterra." />

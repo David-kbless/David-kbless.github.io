@@ -109,16 +109,16 @@
                 }
                 else
                 {
-                    @foreach (var section in selectedProject.Sections)
+                    @foreach (var projectSection in selectedProject.Sections)
                     {
                         <section class="project-modal-section">
-                            <h3 class="project-modal-section-title">@section.Title</h3>
-                            @if (!string.IsNullOrWhiteSpace(section.Subtitle))
+                            <h3 class="project-modal-section-title">@projectSection.Title</h3>
+                            @if (!string.IsNullOrWhiteSpace(projectSection.Subtitle))
                             {
-                                <p class="project-modal-section-subtitle">@section.Subtitle</p>
+                                <p class="project-modal-section-subtitle">@projectSection.Subtitle</p>
                             }
                             <ul class="project-modal-list">
-                                @foreach (var bullet in section.Items)
+                                @foreach (var bullet in projectSection.Items)
                                 {
                                     <li>
                                         @bullet.Text
